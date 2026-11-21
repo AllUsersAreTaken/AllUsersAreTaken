@@ -18,6 +18,23 @@ than batch 16 — a cliff that is only visible in measurement. Measured a +11.8-
 (95% CI +7.8 to +15.8) parallel-reasoning gain at 1.37x median wall clock on 400
 held-out GSM8K items, and showed the gain plateaus at N=8.
 
+**[bt4-1bit-chess](https://github.com/AllUsersAreTaken/bt4-1bit-chess)** — a
+2650-Elo Leela-style network (BT4, 1024×15×32) compressed to **1.04 bits per
+weight**, playing **1495 Elo**. One bit costs ~1,600 Elo while costing only 18
+points of one-ply puzzle agreement: the cheap proxy reads as "mostly intact" for
+an engine that cannot play. Also showed that **rank, not bits, is where the loss
+starts** (exact SVD to rank d/2 discards 19.5% of each matrix and takes solve@1
+from 0.9440 to 0.3110 at 16 bits per factor), and recorded an amendment where the
+full-rank sign optimiser never moved a single sign and still passed its gate.
+
+**[littlebit-qubo](https://github.com/AllUsersAreTaken/littlebit-qubo)** — learned
+sign search instead of ITQ for 1-bit weights. On Qwen3-0.6B (596M, 325.7 MB) at
+**0.55 bits/weight**, replacing ITQ's 0.2 s sign assignment with a 320 s QUBO solve
+cuts init perplexity from 58,178,401 to **9,246** — 6,300× — with no gradient step,
+while PiQA moves +0.75 pp and ARC-C moves −3.5 pp. Both are in the table, because
+the arm with the best weighted error has the worst unweighted error, and which of
+those numbers you publish decides what the result looks like.
+
 **[qreg](https://github.com/AllUsersAreTaken/qreg)** — learned-QUBO correspondence
 selection for image registration: SIFT front-end, a QUBO decides which candidate
 matches to keep, a path-integral annealer solves it, compared against RANSAC at
