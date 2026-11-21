@@ -1,8 +1,7 @@
 PhD in biomedical engineering (University of Miami, 2025), BS in applied physics
 (NYU). I work on **quantum-inspired optimisation for hard combinatorial problems,
-low-bit LLM inference, and the measurement validity of both** — measured end to
-end, mostly on hardware I own (one RTX 4060, 8 GB, and a wall meter I don't have
-yet).
+low-bit LLM inference, and the measurement validity of both** 
+Ispend most of my time disproving my own worst ideas.
 
 Most of my work is one question: **does the proxy measure the thing?**
 
