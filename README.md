@@ -1,5 +1,3 @@
-# Hi, I'm Max
-
 PhD in biomedical engineering (University of Miami, 2025), BS in applied physics
 (NYU). I work on **quantum-inspired optimisation for hard combinatorial problems,
 low-bit LLM inference, and the measurement validity of both** — measured end to
@@ -14,7 +12,7 @@ Most of my work is one question: **does the proxy measure the thing?**
 — where spare decode compute on a consumer GPU can carry secondary work
 (parallel reasoning, context compaction). C++ harness over pinned llama.cpp.
 Located the MMVQ→MMQ kernel transition at `ne11=9`, so batch 8 costs more per step
-than batch 16 — a cliff that is only visible in measurement. Measured a +11.8-point
+than batch 16, a cliff that is only visible in measurement. Measured a +11.8-point
 (95% CI +7.8 to +15.8) parallel-reasoning gain at 1.37x median wall clock on 400
 held-out GSM8K items, and showed the gain plateaus at N=8.
 
@@ -54,21 +52,7 @@ Carlo core with an oracle pipeline, a MATLAB testbench verified against the RTL,
 a dense associative memory (Quantum Heat Bath Hopfield Memory) built on the same
 architecture.
 
-## How I work
-
-I pre-register the gates before collecting data, then append **dated amendments**
-when measurement forces a change, rather than editing the claim. A lot of what I
-publish is negative, and some of it retracts earlier results of mine:
-
-- *Amendment A10:* a change improved the surrogate objective and degraded the
-  metric the claim was written on. Kept as a negative result.
-- *Amendment A14:* a third model family falsified my own mechanism claim from A12.
-  The amendment says so and narrows the surviving claim.
-- *A15:* a forecasting model I had used was refuted out-of-sample at the value it
-  predicted, and was retired as a tool — with the refutation left in the document.
-- *qreg's "Bugs found" section:* three defects that were **manufacturing results**,
-  including border reflection creating a phantom 180-degree consensus that made
-  RANSAC look like it failed at 41% inliers.
+A lot of what I publish is negative results, I'd rather have nothing than get called out for overhype:
 
 Every repo carries a `LIMITATIONS.md` or an explicit non-claims section naming
 where its results stop.
@@ -78,4 +62,4 @@ where its results stop.
 Magnetoelectric nanoparticle platforms for wireless neuromodulation and cancer
 theranostics — 8 peer-reviewed papers, 3 first-author.
 
-Miami, FL · mxs7805@miami.edu
+
